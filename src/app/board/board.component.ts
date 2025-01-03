@@ -2,10 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { Card } from '../models/card.interface';
 import { Player } from '../models/player.interface';
 import { NgFor } from '@angular/common';
+import { CardComponent } from "../card/card.component";
+import { PlayerComponent } from "../player/player.component";
 
 @Component({
   selector: 'app-board',
-  imports: [NgFor],
+  imports: [NgFor, CardComponent, PlayerComponent],
   templateUrl: './board.component.html',
   styleUrl: './board.component.scss'
 })
@@ -22,7 +24,7 @@ export class BoardComponent implements OnInit {
   }
 
   initializeGame() {
-    const values = ['🌟', '🎈', '🎨', '🎭', '🎪', '🎯', '🎲', '🎱'];
+    const values = ['🌟', '🎈', '🎨', '🎭', '🎪', '🎯', '🎲', '🎱','🐈‍⬛'];
     this.cards = [...values, ...values].map((value, index) => ({
       id: index,
       value,

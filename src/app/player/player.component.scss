@@ -1,0 +1,57 @@
+// First, import a retro gaming font (add this at the top of your file)
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+
+.player {
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    background-color: #2b2b2b;
+    border: 3px solid #4a4a4a;
+    font-family: 'Press Start 2P', cursive;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+
+    // Add pixelated effect to the border
+    image-rendering: pixelated;
+
+    &.active {
+        background-color: #28b92b;
+        color: #ffffff;
+        transform: translateY(-2px);
+        box-shadow:
+            0 4px 0 #1a7a1c,
+            0 6px 8px rgba(40, 185, 43, 0.2);
+        border-color: #3dc740;
+        text-shadow: 2px 2px #1a7a1c;
+    }
+
+    &:not(.active) {
+        &:hover {
+            transform: translateY(-1px);
+            box-shadow:
+                0 4px 0 #1f1f1f,
+                0 6px 8px rgba(0, 0, 0, 0.2);
+            background-color: #3a3a3a;
+        }
+    }
+
+    // Add score styling
+    .player-score {
+        margin-top: 8px;
+        font-size: 16px;
+        color: #ffd700; // Golden color for score
+        text-shadow: 1px 1px #000;
+    }
+
+    // Add name styling
+    .player-name {
+        margin-bottom: 5px;
+        font-size: 12px;
+        color: #fff;
+    }
+}

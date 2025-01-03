@@ -1,21 +1,12 @@
 <div class="players">
-    <div class="player" [class.active]="player1.isCurrentTurn">
-        <h3>{{player1.name}}</h3>
-        <p>Score: {{player1.score}}</p>
-    </div>
-    <div class="player" [class.active]="player2.isCurrentTurn">
-        <h3>{{player2.name}}</h3>
-        <p>Score: {{player2.score}}</p>
-    </div>
+    <app-player [player]="player1"></app-player>
+    <app-player [player]="player2"></app-player>
 </div>
 
 
 <div class="board">
-    <div *ngFor="let card of cards" class="card" [class.flipped]="card.isFlipped" [class.matched]="card.isMatched"
-        (click)="flipCard(card)">
-        <div class="card-inner">
-            <div class="card-front"></div>
-            <div class="card-back">{{card.value}}</div>
-        </div>
+    <div *ngFor="let card of cards" >
+        <app-card [card]="card"
+        (click)="flipCard(card)"></app-card>
     </div>
 </div>
