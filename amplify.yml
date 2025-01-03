@@ -16,6 +16,7 @@ frontend:
         - npx ng version
     build:
       commands:
+        - npx ampx generate outputs --out-dir src
         - npx ng build --configuration=production
   artifacts:
     baseDirectory: dist/amplify-angular-template/browser
