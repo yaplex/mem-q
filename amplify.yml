@@ -19,7 +19,7 @@ frontend:
         - npx ampx generate outputs --out-dir src --app-id $AWS_APP_ID --branch $AWS_BRANCH
         - npx ng build --configuration=production
   artifacts:
-    baseDirectory: dist/amplify-angular-template/browser
+    baseDirectory: dist/mem-q/browser
     files:
       - '**/*'
   cache:
